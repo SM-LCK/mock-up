@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:practice/screens/routelist.dart';
 import 'package:practice/widgets/tab_bar_widget.dart';
 
 class NoPotPage extends StatelessWidget {
@@ -38,6 +37,31 @@ class NoPotPage extends StatelessWidget {
                       height: 50,
                       child: Icon(
                         Icons.arrow_back,
+                        color: Colors.black,
+                        size: 40,
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  alignment: Alignment.centerRight,
+                  height: 100,
+                  margin: const EdgeInsets.all(10.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      // create로 이동
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 5,
+                              color: Colors.blue
+                          )
+                      ),
+                      width: 100,
+                      height: 80,
+                      child: Icon(
+                        Icons.library_add,
                         color: Colors.black,
                         size: 40,
                       ),
