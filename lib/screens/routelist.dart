@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practice/screens/no_pot.dart';
+import 'package:practice/screens/pot_list.dart';
 import 'package:practice/widgets/tab_bar_widget.dart';
 
 
@@ -48,7 +49,7 @@ class RouteListPage extends StatelessWidget {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context){
-                        return const NoPotPage();
+                        return const PotListPage();
                       }));
                     },
                     child: Container(
