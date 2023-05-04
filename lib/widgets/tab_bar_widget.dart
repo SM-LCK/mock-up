@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:practice/screens/no_pot.dart';
 import 'package:practice/screens/routelist.dart';
+import 'package:practice/screens/ing.dart';
+import 'package:practice/screens/mypage.dart';
+
 
 Widget tabBar(BuildContext context) {
   return Row(
@@ -31,7 +34,7 @@ Widget tabBar(BuildContext context) {
       GestureDetector(
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context){
-            return const NoPotPage();
+            return const IngPage();
           }));
         },
         child: Container(
@@ -53,7 +56,7 @@ Widget tabBar(BuildContext context) {
       GestureDetector(
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context){
-            return const NoPotPage();
+            return const MyPage();
           }));
         },
         child: Container(
