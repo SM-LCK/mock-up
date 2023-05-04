@@ -49,7 +49,7 @@ class NoPotPage extends StatelessWidget {
                   margin: const EdgeInsets.all(10.0),
                   child: GestureDetector(
                     onTap: () {
-                      // create로 이동
+                      Navigator.pushNamed(context, '/CreatePotPage');
                     },
                     child: Container(
                       decoration: BoxDecoration(

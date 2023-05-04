@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practice/screens/routelist.dart';
+import 'package:practice/screens/createpot.dart';
 import 'package:practice/widgets/tab_bar_widget.dart';
 
 class PotListPage extends StatelessWidget {
@@ -52,7 +52,7 @@ class PotListPage extends StatelessWidget {
                   margin: const EdgeInsets.all(10.0),
                   child: GestureDetector(
                     onTap: () {
-                      // create로 이동
+                      Navigator.pushNamed(context, '/CreatePotPage');
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -121,7 +121,7 @@ class PotListPage extends StatelessWidget {
                                     ),
                                     GestureDetector(
                                       onTap: () {
-                                        // ing로 이동하기
+                                        Navigator.pushNamed(context, '/IngPage');
                                       },
                                       child: Container(
                                         alignment: Alignment.center,
@@ -170,7 +170,7 @@ class PotListPage extends StatelessWidget {
                   margin: const EdgeInsets.all(10.0),
                   child: GestureDetector(
                     onTap: () {
-                      // create로 이동
+                      Navigator.pushNamed(context, '/IngPage');
                     },
                     child: Container(
                       alignment: Alignment.center,

@@ -20,7 +20,7 @@ class PricePage extends StatelessWidget {
                 Navigator.pushNamed(context, '/NrequestPage');
               },
               child: Padding(
-                padding: const EdgeInsets.only(left: 55, top: 520),
+                padding: const EdgeInsets.only(left: 70, top: 570),
                 child: Container(
                   decoration: BoxDecoration(
                       border: Border.all(
@@ -28,8 +28,8 @@ class PricePage extends StatelessWidget {
                           color: Colors.blue
                       )
                   ),
-                  width: 300,
-                  height: 80,
+                  width: 260,
+                  height: 90,
                 ),
               ),
             ),

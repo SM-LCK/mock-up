@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:practice/screens/routelist.dart';
 
-class PotListPage extends StatelessWidget {
-  const PotListPage({Key? key}) : super(key: key);
+class PotListPage0 extends StatelessWidget {
+  const PotListPage0({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
