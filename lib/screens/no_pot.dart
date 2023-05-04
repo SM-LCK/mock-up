@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:practice/screens/ing.dart';
-import 'package:practice/screens/mypage.dart';
-import 'package:practice/screens/no_pot.dart';
-import 'package:practice/screens/pot_list.dart';
 import 'package:practice/widgets/tab_bar_widget.dart';
 
-class RouteListPage extends StatelessWidget {
-  const RouteListPage({Key? key}) : super(key: key);
+class NoPotPage extends StatelessWidget {
+  const NoPotPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,21 +12,19 @@ class RouteListPage extends StatelessWidget {
             decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: AssetImage('assets/route.png'),
+                  image: AssetImage('assets/nopot.png'),
                 )
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  alignment: Alignment.center,
-                  height: 370,
-                  padding: const EdgeInsets.only(top: 150),
+                  alignment: Alignment.centerLeft,
+                  height: 100,
+                  margin: const EdgeInsets.all(10.0),
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context){
-                        return const NoPotPage();
-                      }));
+                      Navigator.pop(context);
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -39,19 +33,23 @@ class RouteListPage extends StatelessWidget {
                               color: Colors.blue
                           )
                       ),
-                      width: 360,
-                      height: 170,
+                      width: 50,
+                      height: 50,
+                      child: Icon(
+                        Icons.arrow_back,
+                        color: Colors.black,
+                        size: 40,
+                      ),
                     ),
                   ),
                 ),
                 Container(
-                  alignment: Alignment.topCenter,
-                  height: 270,
+                  alignment: Alignment.centerRight,
+                  height: 100,
+                  margin: const EdgeInsets.all(10.0),
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context){
-                        return const PotListPage();
-                      }));
+                      // create로 이동
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -60,16 +58,22 @@ class RouteListPage extends StatelessWidget {
                               color: Colors.blue
                           )
                       ),
-                      width: 360,
-                      height: 170,
+                      width: 100,
+                      height: 80,
+                      child: Icon(
+                        Icons.library_add,
+                        color: Colors.black,
+                        size: 40,
+                      ),
                     ),
                   ),
                 ),
-                tabBar(context)
+                tabBar(context),
               ],
             ),
-          )  
-        ),
-    ));
+          ),
+        )
+    );
   }
 }
+
