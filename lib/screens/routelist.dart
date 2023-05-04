@@ -70,6 +70,6 @@ class RouteListPage extends StatelessWidget {
             ),
           )  
         ),
-    ));
+    );
   }
 }
