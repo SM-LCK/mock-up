@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:practice/screens/routelist.dart';
 
-class N_1RequestPage extends StatelessWidget {
-  const N_1RequestPage({Key? key}) : super(key: key);
+class PotListPage extends StatelessWidget {
+  const PotListPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class N_1RequestPage extends StatelessWidget {
       decoration: BoxDecoration(
           image: DecorationImage(
         fit: BoxFit.cover,
-        image: AssetImage('assets/n_1request.png'),
+        image: AssetImage('assets/potlist.png'),
       )),
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -19,7 +19,16 @@ class N_1RequestPage extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
-                ShowComplete(context);
+                showModalBottomSheet<void>(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return SizedBox(
+                        height: 300,
+                        child: Image(
+                          image: AssetImage('assets/joinmodal.png'),
+                        ));
+                  },
+                );
               },
               child: Padding(
                 padding: const EdgeInsets.only(left: 300, top: 400),
@@ -33,7 +42,16 @@ class N_1RequestPage extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                ShowNoMoney(context);
+                showModalBottomSheet<void>(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return SizedBox(
+                        height: 300,
+                        child: Image(
+                          image: AssetImage('assets/outmodal.png'),
+                        ));
+                  },
+                );
               },
               child: Padding(
                 padding: const EdgeInsets.only(left: 300, top: 140),
@@ -49,45 +67,5 @@ class N_1RequestPage extends StatelessWidget {
         ),
       ),
     ));
-  }
-
-  void ShowComplete(BuildContext context) {
-    showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            content: Text("정산이 완료되었습니다."),
-            actions: [
-              Center(
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  child: Text('확인'),
-                ),
-              )
-            ],
-          );
-        });
-  }
-
-  void ShowNoMoney(BuildContext context) {
-    showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            content: Text("잔액 부족"),
-            actions: [
-              Center(
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/ChargePage');
-                  },
-                  child: Text('충전하러가기'),
-                ),
-              )
-            ],
-          );
-        });
   }
 }

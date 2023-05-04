@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:practice/screens/no_pot.dart';
 import 'package:practice/screens/routelist.dart';
 import 'package:practice/screens/ing.dart';
 import 'package:practice/screens/mypage.dart';
-
 
 Widget tabBar(BuildContext context) {
   return Row(
