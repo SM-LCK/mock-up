@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:practice/screens/charge.dart';
+import 'package:practice/screens/ing.dart';
 import 'package:practice/screens/login.dart';
+import 'package:practice/screens/mypage.dart';
+import 'package:practice/screens/n_1request.dart';
+import 'package:practice/screens/price.dart';
+import 'package:practice/screens/record.dart';
+import 'package:practice/screens/routelist.dart';
 
 void main() {
-  runApp(const MyApp()); // 앱 실행 MyApp에 메인페이지 적어주면 됨
+  runApp(MyApp()); // 앱 실행 MyApp에 메인페이지 적어주면 됨
 }
 
 class MyApp extends StatelessWidget {
@@ -11,11 +18,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: SafeArea(
-            child : LoginPage()
-        ),
-      )
+      initialRoute: '/',
+      routes: {
+        '/':(context)=>LoginPage(),
+        '/RoutePage':(context)=> RouteListPage(),
+        '/MyPage':(context)=>MyPage(),
+        '/IngPage':(context)=>IngPage(),
+        '/ChargePage': (context)=>ChargePage(),
+        '/RecordPage': (context)=>RecordPage(),
+        '/NrequestPage':(context)=>NrequestPage(),
+        '/PricePage':(context) => PricePage(),
+      },
+      //  home: Scaffold(
+      //    body: SafeArea(
+      //        child : LoginPage()
+      //    ),
+      //  )
     );
   }
 }

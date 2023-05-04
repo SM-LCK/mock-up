@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:practice/screens/ing.dart';
+import 'package:practice/screens/mypage.dart';
 import 'package:practice/screens/no_pot.dart';
 import 'package:practice/screens/pot_list.dart';
 import 'package:practice/widgets/tab_bar_widget.dart';
-
 
 class RouteListPage extends StatelessWidget {
   const RouteListPage({Key? key}) : super(key: key);
@@ -67,8 +68,8 @@ class RouteListPage extends StatelessWidget {
                 tabBar(context)
               ],
             ),
-          ),
-        )
-    );
+          )  
+        ),
+    ));
   }
 }
